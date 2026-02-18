@@ -24,7 +24,7 @@ Works on Mac, Windows, and Linux. No GPU required.
 
 ## Why I Built This
 
-You spend half the day reading code you didn't write. Other people's repositories, legacy systems, unfamiliar frameworks. You need to answer questions like:
+I spend half the day reading code I didn't write. Other people's repositories, legacy systems, unfamiliar frameworks. I need to answer questions like:
 
 - "How does authentication work in this app?"
 - "Where is rate limiting implemented?"
