@@ -166,9 +166,9 @@ oracle ask "How does the config loader work?"
 
 ---
 
-### 3. Advanced Features (Phase 7)
+### 3. Advanced Features
 
-#### 🎨 Rich Terminal UI
+#### Rich Terminal UI
 
 Answers include:
 
@@ -190,25 +190,25 @@ oracle ask "Show me the authentication flow"
 # }
 # ```
 #
-# 📚 Sources:
+# Sources:
 # → src/auth/login.ts:42
 # → src/middleware/verify-token.ts:15
 ````
 
-#### ⚡ Smart Context Bypass
+#### Smart Context Bypass
 
 Small repositories (<50K tokens) skip RAG entirely and send the **full codebase** to the LLM:
 
 ```bash
 oracle ask "Summarize this entire project"
 
-# ℹ️  Small codebase detected (12,453 tokens)
-# ℹ️  Sending full repository to LLM (bypassing RAG)
+# Small codebase detected (12,453 tokens)
+# Sending full repository to LLM (bypassing RAG)
 ```
 
 Better accuracy when your context fits in Claude's 200K window.
 
-#### 💾 Response Caching
+#### Response Caching
 
 Identical questions return instant cached responses:
 
@@ -216,19 +216,19 @@ Identical questions return instant cached responses:
 oracle ask "How does indexing work?"   # First call: 3.2s
 oracle ask "How does indexing work?"   # Second call: 0.1s (cached)
 
-# Output: 💾 Using cached response
+# Output: Using cached response
 ```
 
 Cache persists across sessions, invalidates automatically on `oracle index update`.
 
-#### 🔍 Dry-Run Mode
+#### Dry-Run Mode
 
 See exactly what gets sent to the LLM **without making an API call**:
 
 ```bash
 oracle ask "test question" --dry-run
 
-# ⚠️  DRY-RUN MODE - No API call will be made
+# DRY-RUN MODE - No API call will be made
 #
 # Prompt that would be sent:
 # ────────────────────────────────────────
@@ -291,40 +291,40 @@ oracle ask "question" --top-k 20
 
 ## Features
 
-### 🔍 Hybrid RAG Pipeline
+### Hybrid RAG Pipeline
 
 - **BM25 keyword search** (Orama) — Fast exact matching
 - **Vector semantic search** (USearch HNSW + bge-small-en-v1.5) — Understands intent
 - **Cross-encoder reranking** (ms-marco-MiniLM-L-6-v2 ONNX) — Best-in-class relevance
 - **RRF fusion** (k=60) — Industry-standard result merging
 
-### 🎨 Rich Terminal UI
+### Rich Terminal UI
 
 - Syntax-highlighted code blocks (`cli-highlight`)
 - Clickable file citations (OSC 8 hyperlinks via `terminal-link`)
 - Markdown formatting (`marked-terminal`)
 - Graceful fallbacks for unsupported terminals
 
-### ⚡ Performance Optimizations
+### Performance Optimizations
 
 - **Smart context bypass** — Small repos (<50K tokens) send full codebase to LLM
 - **Two-layer caching** — Memory (LRU, 100 entries, 10MB) + disk persistence
 - **Incremental indexing** — Only re-processes changed files
 - **Parallel search** — BM25 + vector search run concurrently
 
-### 🔐 Security
+### Security
 
 - **Secret redaction** — 25 patterns (AWS, OpenAI, GitHub, Stripe, etc.)
 - **Local-first** — Embeddings + indexing run on CPU, no external dependencies
 - **API key isolation** — Only LLM generation calls external APIs
 
-### 🌐 Multi-Provider Support
+### Multi-Provider Support
 
 - **Anthropic Claude** (recommended) — Best quality, streaming support
 - **OpenAI GPT-4o** — Fast, supports o1 reasoning models
 - **Ollama** — 100% local, zero cost, no API key needed
 
-### 📦 Cross-Platform
+### Cross-Platform
 
 - Windows, macOS, Linux
 - Node.js 20+ (ESM-first, pure JavaScript, no native compilation)
@@ -635,7 +635,7 @@ oracle/
 
 ## Roadmap
 
-### v1.0 (Shipped ✅)
+### v1.0 (Shipped)
 
 - [x] Hybrid RAG pipeline (BM25 + vector + reranking)
 - [x] Multi-provider support (Anthropic, OpenAI, Ollama)
