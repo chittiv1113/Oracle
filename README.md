@@ -18,33 +18,24 @@ Works on Mac, Windows, and Linux. No GPU required.
 
 ---
 
-> "Finally, a tool that understands what I'm asking instead of just matching keywords."
-
-> "The syntax highlighting and clickable file citations in the terminal are game-changing."
-
-> "I've tried GitHub Copilot search, Sourcegraph, and grep-based tools. This is the first one that feels like talking to someone who actually read the codebase."
-
----
-
 **[Why I Built This](#why-i-built-this)** · **[How It Works](#how-it-works)** · **[Commands](#commands)** · **[Features](#features)** · **[Installation](#installation)**
 
 ---
 
 ## Why I Built This
 
-I spend half my day reading code I didn't write. Other people's repositories, legacy systems, unfamiliar frameworks. I need to answer questions like:
+You spend half the day reading code you didn't write. Other people's repositories, legacy systems, unfamiliar frameworks. You need to answer questions like:
 
 - "How does authentication work in this app?"
 - "Where is rate limiting implemented?"
 - "What's the flow for processing payments?"
 
-Traditional tools don't work:
+Traditional tools don't always work:
 
 - **grep/ripgrep** — Keyword search. Can't understand "how does X work?"
 - **GitHub search** — Same problem. I don't know what variable names to search for.
 - **IDE symbol search** — Good for "find this function," useless for "explain this subsystem."
 - **Reading files manually** — Too slow. Takes hours to build context.
-- **LLMs without RAG** — Hallucinate. Make up code that doesn't exist.
 
 So I built Oracle. The missing layer between keyword search and actually understanding a codebase.
 
@@ -52,13 +43,11 @@ So I built Oracle. The missing layer between keyword search and actually underst
 
 This is what code search should have been all along.
 
-— **Vyas**
-
 ---
 
 ## Who This Is For
 
-- **Engineers joining new codebases** — Onboard 10x faster
+- **Anyone joining new codebases** — Onboard 10x faster
 - **Open-source contributors** — Understand unfamiliar projects before contributing
 - **Documentation writers** — Verify how systems actually work
 - **Solo developers** — Navigate your own code months later
